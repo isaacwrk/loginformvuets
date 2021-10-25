@@ -1,5 +1,5 @@
 <template>
-<div v-if="!userService.getters.isLoggedIn" class="min-h-full flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
+<div v-if="!userService.getters.isLoggedIn" class="min-h-full flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8 bg-gray-300 rounded mr-4 ml-4">
   <Login/>
 </div>
 <div v-else class="text-center text-2xl bg-gray-200 mr-32 ml-32 rounded">
