@@ -1,18 +1,32 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
+<div v-if="!userService.getters.isLoggedIn" class="min-h-full flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
+  <Login/>
+</div>
+<div v-else class="text-center text-2xl bg-gray-200 mr-32 ml-32 rounded">
+  <h2 class="text-green-700 hover:text-green-500">Olá, {{userService.state.name}}</h2>
+  <Counter/>
+  <button @click="userService.logout()" class="rounded mt-2 py-3 text-sm px-6 text-white bg-red-600 hover:bg-red-700">
+    Sair
+  </button>
+</div>
 </template>
 
 <script lang="ts">
-import { Options, Vue } from 'vue-class-component';
-import HelloWorld from './components/HelloWorld.vue';
 
-@Options({
-  components: {
-    HelloWorld,
-  },
+import Login from '@/components/Login.vue'
+import userService from '@/services/user'
+import Counter from '@/components/Counter.vue'
+import { defineComponent, onMounted } from '@vue/runtime-core'
+
+
+export default defineComponent({
+  name: 'App',
+  components: { Login, Counter },
+  setup() {
+    onMounted(userService.getUser)
+    return { userService }
+  }
 })
-export default class App extends Vue {}
 </script>
 
 <style>
