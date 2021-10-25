@@ -9,6 +9,7 @@
     Sair
   </button>
 </div>
+
 </template>
 
 <script lang="ts">
@@ -17,6 +18,7 @@ import Login from '@/components/Login.vue'
 import userService from '@/services/user'
 import Counter from '@/components/Counter.vue'
 import { defineComponent, onMounted } from '@vue/runtime-core'
+
 
 
 export default defineComponent({
