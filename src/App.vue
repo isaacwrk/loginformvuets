@@ -5,11 +5,10 @@
 <div v-else class="min-h-full h-24 flex flex-col w-2/4 text-center inline-table text-2xl mr-3 ml-3 mt-10 rounded shadow-xl">
   <h2 class="text-green-700 hover:text-green-500">Olá, {{userService.state.name}}</h2>
   <Counter/>
-  <button @click="userService.logout()" class="rounded py-3 text-sm px-6 text-white bg-red-600 hover:bg-red-700">
+  <button @click="userService.logout()" class="rounded py-3 text-sm px-6 text-white transition duration-500 ease-in-out bg-red-600 hover:bg-red-700 transform hover:-translate-y-1 hover:scale-110 ...">
     Sair
   </button>
 </div>
-
 </template>
 
 <script lang="ts">
