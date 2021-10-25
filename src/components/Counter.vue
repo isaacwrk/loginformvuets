@@ -1,5 +1,5 @@
 <template>
-<div class="mt-3 mr-5 ml-5">
+<div class="mt-2 bg-white">
     <div class="mt-2">
         <h1>Contador</h1>
         <h2>{{ counter }}</h2>
