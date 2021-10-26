@@ -3,7 +3,7 @@
 <div v-if="!userService.getters.isLoggedIn" class="min-h-screen flex flex-col items-center justify-center py-12 px-4 sm:px-6 lg:px-8 mr-4 ml-4">
   <Login/>
 </div>
-<div v-else class="min-h-full h-24 flex flex-col w-2/4 text-center inline-table text-2xl mr-3 ml-3 mt-10 rounded border-indigo-50 shadow-lg">
+<div v-else class="min-h-full h-24 flex flex-col w-2/4 text-center inline-table text-2xl mr-3 ml-3 mt-10 rounded border-indigo-50 border-4 border-indigo-100	shadow-lg">
   <h2 class="text-green-700 hover:text-green-500">Olá, {{userService.state.name}}</h2>
      <Counter/>
   <button @click="userService.logout()" class="mt-3 mb-1 rounded py-3 text-sm px-6 text-white transition duration-500 ease-in-out bg-red-600 hover:bg-red-700 transform hover:-translate-y-1 hover:scale-110 ...">
